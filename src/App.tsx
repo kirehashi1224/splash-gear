@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { FC, useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: FC = () => {
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -32,7 +30,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
