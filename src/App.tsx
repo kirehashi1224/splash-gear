@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
 import reactLogo from './assets/react.svg';
-import './App.css';
+import { styles } from './App.css';
 
 const App: FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className={styles.root}>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
@@ -18,8 +18,12 @@ const App: FC = () => {
       </div>
       <h1>Vite + React</h1>
       <p className="text-blue-300 bg-red-600">Hello Vite + React!</p>
+      <p className={styles.header}>vanilla-extract</p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button
+          className="button"
+          onClick={() => setCount((count) => count + 1)}
+        >
           count is {count}
         </button>
         <p>
